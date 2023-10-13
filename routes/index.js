@@ -1,6 +1,4 @@
-'use strict';
-
-module.exports = async (server, { hdbCore, logger }) => {
+const getAll = async (server, { hdbCore, logger }) => {
   server.route({
     url: '/getAll',
     method: 'GET',
@@ -9,8 +7,8 @@ module.exports = async (server, { hdbCore, logger }) => {
         operation: 'sql',
         sql: 'SELECT * FROM data.dogs'
       };
-
       return hdbCore.requestWithoutAuthentication(request);
     }
   });
 }
+export default getAll;
