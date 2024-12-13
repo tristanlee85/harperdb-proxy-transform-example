@@ -1,6 +1,18 @@
 {
-  "name": "application-template",
+  "name": "harperdb-proxy-transform-example",
   "version": "1.0.0",
-  "description": "A template for building HarperDB applications",
-  "type": "module"
+  "description": "An example of using harperdb-proxy-transform",
+  "type": "module",
+  "dependencies": {
+    "harperdb-proxy-transform": "github:tristanlee85/harperdb-proxy-transform#v0.0.5",
+    "cheerio": "^1.0.0",
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.4.7",
+    "dotenv-cli": "^7.4.4",
+    "harperdb": "^4.4.8"
+  },
+  "scripts": {
+    "deploy": "dotenv -e .env -- sh -c 'harperdb deploy target=$HARPERDB_TARGET skip_node_modules=false'",
+    "restart": "dotenv -e .env -- sh -c 'harperdb restart target=$HARPERDB_TARGET'"
+  }
 }
