@@ -13,6 +13,6 @@
   },
   "scripts": {
     "deploy": "dotenv -e .env -- sh -c 'harperdb deploy target=$HARPERDB_TARGET skip_node_modules=false'",
-    "restart": "dotenv -e .env -- sh -c 'harperdb restart target=$HARPERDB_TARGET'"
+    "restart": "dotenv -e .env -- sh -c 'harperdb restart target=$HARPERDB_TARGET replicated=true'"
   }
 }

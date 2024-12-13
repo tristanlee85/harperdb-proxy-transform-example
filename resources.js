@@ -14,9 +14,9 @@ export class MyCustomResource extends tables.TableName {
 }
  */
 // we can also define a custom resource without a specific table
-export class Greeting extends Resource {
-	// a "Hello, world!" handler
-	get() {
-		return { greeting: 'Hello, world!' };
-	}
-}
+// export class Greeting extends Resource {
+// 	// a "Hello, world!" handler
+// 	get() {
+// 		return { greeting: 'Hello, world!' };
+// 	}
+// }
